@@ -1,0 +1,780 @@
+/* =================================
+   BASIC RESET
+================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+
+    background-color: #05070d;
+
+    color: white;
+
+    line-height: 1.6;
+}
+
+
+/* =================================
+   NAVIGATION
+================================= */
+
+header {
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+
+    z-index: 10;
+}
+
+
+.navbar {
+    width: 90%;
+    max-width: 1200px;
+
+    margin: auto;
+
+    padding: 25px 0;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+}
+
+
+.logo {
+    font-size: 28px;
+
+    font-weight: bold;
+
+    letter-spacing: 3px;
+}
+
+
+.logo span,
+.footer-logo span {
+    color: #4ea8ff;
+}
+
+
+.nav-links {
+    list-style: none;
+
+    display: flex;
+
+    gap: 30px;
+}
+
+
+.nav-links a {
+    color: white;
+
+    text-decoration: none;
+
+    font-size: 14px;
+
+    transition: 0.3s;
+}
+
+
+.nav-links a:hover {
+    color: #4ea8ff;
+}
+
+
+/* =================================
+   HERO
+================================= */
+
+.hero {
+    min-height: 100vh;
+
+    display: flex;
+
+    align-items: center;
+
+    position: relative;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(2, 5, 12, 0.95),
+            rgba(2, 5, 12, 0.55),
+            rgba(2, 5, 12, 0.15)
+        ),
+        url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQnRPUWENZpG3AGa__Ryy3W2XhdaisZqsa9nCFVkwTgFA&s=10");
+
+    background-size: cover;
+
+    background-position: center;
+
+    padding-top: 80px;
+}
+
+
+.hero-content {
+    width: 90%;
+
+    max-width: 1200px;
+
+    margin: auto;
+
+    padding-top: 100px;
+}
+
+
+.small-text,
+.section-label {
+    color: #4ea8ff;
+
+    letter-spacing: 4px;
+
+    font-size: 13px;
+
+    font-weight: bold;
+}
+
+
+.hero h1 {
+    font-family: Georgia, serif;
+
+    font-size: clamp(60px, 10vw, 130px);
+
+    line-height: 0.9;
+
+    letter-spacing: 5px;
+
+    margin: 20px 0;
+}
+
+
+.hero-tagline {
+    font-size: 25px;
+
+    color: #d5eaff;
+
+    margin-bottom: 10px;
+}
+
+
+.artist-type {
+    color: #fcfbfb;
+
+    letter-spacing: 3px;
+
+    margin-bottom: 30px;
+}
+
+
+/* =================================
+   BUTTONS
+================================= */
+
+.main-button,
+.outline-button {
+    display: inline-block;
+
+    padding: 13px 28px;
+
+    text-decoration: none;
+
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+
+.main-button {
+    background: #4ea8ff;
+
+    color: #05070d;
+}
+
+
+.main-button:hover {
+    background: white;
+
+    transform: translateY(-3px);
+}
+
+
+.outline-button {
+    border: 1px solid #4ea8ff;
+
+    color: #4ea8ff;
+
+    margin-top: 20px;
+}
+
+
+.outline-button:hover {
+    background: #4ea8ff;
+
+    color: #05070d;
+}
+
+
+/* =================================
+   COMMON SECTIONS
+================================= */
+
+.section {
+    width: 90%;
+
+    max-width: 1200px;
+
+    margin: auto;
+
+    padding: 110px 0;
+}
+
+
+.section-heading {
+    text-align: center;
+
+    margin-bottom: 55px;
+}
+
+
+.section-heading h2 {
+    font-family: Georgia, serif;
+
+    font-size: 48px;
+
+    margin: 10px 0;
+}
+
+
+.section-heading p:last-child {
+    color: #999;
+}
+
+
+/* =================================
+   ABOUT
+================================= */
+
+.about {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 70px;
+
+    align-items: center;
+}
+
+
+.about-image img {
+    width: 100%;
+
+    height: 550px;
+
+    object-fit: cover;
+}
+
+
+.about-content h2 {
+    font-family: Georgia, serif;
+
+    font-size: 55px;
+
+    margin: 10px 0 20px;
+}
+
+
+.about-content p:not(.section-label) {
+    color: #aaa;
+
+    margin-bottom: 15px;
+}
+
+
+/* =================================
+   MUSIC
+================================= */
+
+.music {
+    width: 100%;
+
+    max-width: none;
+
+    background: #080d18;
+
+    padding-left: 5%;
+
+    padding-right: 5%;
+}
+
+
+.music-card {
+    max-width: 1000px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    background: #0f1726;
+
+    border: 1px solid #1b3658;
+}
+
+
+.album-cover img {
+    width: 100%;
+
+    height: 400px;
+
+    object-fit: cover;
+}
+
+
+.music-info {
+    padding: 50px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+}
+
+
+.release-label {
+    color: #4ea8ff;
+
+    letter-spacing: 3px;
+
+    font-size: 12px;
+}
+
+
+.music-info h3 {
+    font-family: Georgia, serif;
+
+    font-size: 38px;
+
+    margin: 10px 0;
+}
+
+
+.music-info > p {
+    color: #aaa;
+}
+
+
+.music-line {
+    width: 100%;
+
+    height: 1px;
+
+    background: #263a54;
+
+    margin: 25px 0;
+}
+
+
+.music-description {
+    margin-bottom: 25px;
+}
+
+
+/* =================================
+   ALBUMS
+================================= */
+
+.album-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+
+.album-card {
+    background: #0d121c;
+
+    border: 1px solid #1b2738;
+
+    overflow: hidden;
+
+    transition: 0.3s;
+}
+
+
+.album-card:hover {
+    transform: translateY(-8px);
+
+    border-color: #4ea8ff;
+}
+
+
+.album-card img {
+    width: 100%;
+
+    height: 300px;
+
+    object-fit: cover;
+}
+
+
+.album-info {
+    padding: 20px;
+}
+
+
+.album-info h3 {
+    font-family: Georgia, serif;
+
+    font-size: 22px;
+}
+
+
+.album-info p {
+    color: #777;
+}
+
+
+/* =================================
+   BLUE FAMILY
+================================= */
+
+.blue-family {
+    min-height: 450px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    background:
+        linear-gradient(
+            rgba(3, 10, 25, 0.78),
+            rgba(3, 10, 25, 0.92)
+        ),
+        url("images/concert2.jpg");
+
+    background-size: cover;
+
+    background-position: center;
+}
+
+
+.blue-family-content {
+    max-width: 700px;
+
+    padding: 30px;
+}
+
+
+.blue-family h2 {
+    font-family: Georgia, serif;
+
+    font-size: 60px;
+
+    margin: 15px 0;
+}
+
+
+.blue-family p:not(.section-label) {
+    color: #c0c8d4;
+
+    margin-bottom: 30px;
+}
+
+
+/* =================================
+   GALLERY
+================================= */
+
+.gallery {
+    width: 100%;
+
+    max-width: none;
+
+    padding-left: 5%;
+
+    padding-right: 5%;
+
+    background: #080d18;
+}
+
+
+.gallery-grid {
+    max-width: 1200px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 15px;
+}
+
+
+.gallery-grid img {
+    width: 100%;
+
+    height: 280px;
+
+    object-fit: cover;
+
+    transition: 0.4s;
+}
+
+
+.gallery-grid img:hover {
+    transform: scale(1.03);
+}
+
+
+/* =================================
+   CONTACT
+================================= */
+
+.contact {
+    min-height: 500px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    background:
+        radial-gradient(
+            circle,
+            #102d50,
+            #05070d 65%
+        );
+}
+
+
+.contact-content {
+    max-width: 700px;
+
+    padding: 30px;
+}
+
+
+.contact h2 {
+    font-family: Georgia, serif;
+
+    font-size: 58px;
+
+    margin: 15px 0;
+}
+
+
+.contact-content > p:not(.section-label) {
+    color: #aaa;
+
+    margin-bottom: 30px;
+}
+
+
+.social-buttons {
+    display: flex;
+
+    justify-content: center;
+
+    gap: 15px;
+}
+
+
+.social-buttons a {
+    padding: 12px 25px;
+
+    border: 1px solid #4ea8ff;
+
+    color: #4ea8ff;
+
+    text-decoration: none;
+
+    transition: 0.3s;
+}
+
+
+.social-buttons a:hover {
+    background: #4ea8ff;
+
+    color: #05070d;
+}
+
+
+/* =================================
+   FOOTER
+================================= */
+
+footer {
+    border-top: 1px solid #182231;
+
+    padding: 30px 5%;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    color: #777;
+}
+
+
+.footer-logo {
+    color: white;
+
+    font-size: 24px;
+
+    font-weight: bold;
+
+    letter-spacing: 3px;
+}
+
+
+.footer-links {
+    display: flex;
+
+    gap: 20px;
+}
+
+
+.footer-links a {
+    color: #777;
+
+    text-decoration: none;
+}
+
+
+.footer-links a:hover {
+    color: #4ea8ff;
+}
+
+
+/* =================================
+   RESPONSIVE DESIGN
+================================= */
+
+@media (max-width: 850px) {
+
+    .navbar {
+        flex-direction: column;
+
+        gap: 20px;
+    }
+
+
+    .nav-links {
+        gap: 15px;
+
+        flex-wrap: wrap;
+
+        justify-content: center;
+    }
+
+
+    .hero {
+        text-align: center;
+
+        background-position: 65% center;
+    }
+
+
+    .hero-content {
+        padding-top: 100px;
+    }
+
+
+    .about {
+        grid-template-columns: 1fr;
+    }
+
+
+    .music-card {
+        grid-template-columns: 1fr;
+    }
+
+
+    .album-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+
+    .gallery-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+
+    footer {
+        flex-direction: column;
+
+        gap: 20px;
+
+        text-align: center;
+    }
+
+}
+
+
+@media (max-width: 550px) {
+
+    .hero h1 {
+        font-size: 60px;
+    }
+
+
+    .hero-tagline {
+        font-size: 19px;
+    }
+
+
+    .section-heading h2 {
+        font-size: 36px;
+    }
+
+
+    .about-content h2 {
+        font-size: 40px;
+    }
+
+
+    .album-grid,
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    .blue-family h2 {
+        font-size: 42px;
+    }
+
+
+    .contact h2 {
+        font-size: 42px;
+    }
+
+}
